@@ -1,34 +1,90 @@
-# Getting Started
-Design patterns are the best formalized practices a programmer can use to solve common problems when designing an application or system.
 
-Design patterns can speed up the development process by providing tested, proven development paradigms.
+# hg-swift-patterns
 
-Reusing design patterns help prevent subtle issues which cause major problems, and it also improves code readability for coders and architects who are familiar with the patterns.
+**A collection of design pattern implementations in Swift**  
+Explore practical examples of software design patterns written in clean, modern Swift.
 
-[![Carthage compatible](https://img.shields.io/badge/Carthage-Compatible-brightgreen.svg?style=flat)](https://github.com/Carthage/Carthage)
-![Xcode 10.2+](https://img.shields.io/badge/Xcode-10.2%2B-blue.svg)
-![iOS 12.2+](https://img.shields.io/badge/iOS-12.2%2B-blue.svg)
-![Swift 5.0+](https://img.shields.io/badge/Swift-5.0%2B-orange.svg)
+---
 
-# License
-The MIT License (MIT)
+## Patterns Implemented
 
-Copyright (C) 2024, Hung Q. https://htq287.com. All rights reserved.
+### Creational
+- **Unit of Work** — Aggregate operations under a single transaction interface.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+*(Add more patterns here as you expand the project.)*
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+---
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+## 📁 Project Structure
+
+```
+hg-swift-patterns/
+├── creational/
+│   └── UnitOfWork.swift
+├── structural/
+├── behavioral/
+└── LICENSE
+```
+
+- Each folder represents a category of design patterns.
+- Files contain focused, easy-to-read Swift code demonstrating each pattern.
+
+---
+
+## Getting Started
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/hgq287/hg-swift-patterns.git
+cd hg-swift-patterns
+```
+
+### Open in Xcode
+
+Open the project or `.swift` files directly in Xcode to explore and run each pattern.
+
+> You can also create a Swift Playground and import the source code for easier experimentation.
+
+---
+
+## Example Usage (Unit of Work)
+
+```swift
+let repository = Repository()
+let unitOfWork = UnitOfWork(repository: repository)
+
+unitOfWork.perform {
+    // Queue multiple data operations
+}.commit()
+```
+
+---
+
+## Requirements
+
+- Swift 5+
+- Xcode 16 or newer
+- macOS or iOS development environment
+
+---
+
+## Contributing
+
+Want to contribute another pattern or improve an existing one? Feel free to:
+- Fork the repository
+- Submit a pull request
+- Open an issue to discuss improvements
+
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+## Author
+
+Maintained by [@hgq287](https://hgq287.github.io/).  
+Feel free to reach out or share improvements.
