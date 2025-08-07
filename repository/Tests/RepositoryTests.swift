@@ -2,7 +2,7 @@
 //  RepositoryTests.swift
 //  RepositoryTests
 //
-//  Created by Hung Q. Truong on 7/15/19.
+//  Created by Hg Q. on 7/15/19.
 //
 
 import XCTest

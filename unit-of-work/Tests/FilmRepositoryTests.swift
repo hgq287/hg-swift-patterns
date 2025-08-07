@@ -2,7 +2,7 @@
 //  FilmRepositoryTests.swift
 //  UnitOfWorkTests
 //
-//  Created by Hung Truong on 7/11/19.
+//  Created by Hg Q. on 7/11/19.
 //
 
 import XCTest
@@ -38,9 +38,9 @@ class FilmRepositoryTests: XCTestCase {
         mockFilmRepository.repository.registerModified(object: _BenHur)
         mockFilmRepository.repository.registerDeleted(object: _TheLordOfTheRings)
 
-        XCTAssertEqual(2, mockFilmRepository.repository.context!["INSERT"]?.count)
-        XCTAssertEqual(2, mockFilmRepository.repository.context?["MODIFY"]?.count)
-        XCTAssertEqual(1, mockFilmRepository.repository.context!["DELETE"]?.count)
+        XCTAssertEqual(2, mockFilmRepository.repository.context[.insert]?.count)
+        XCTAssertEqual(2, mockFilmRepository.repository.context[.modify]?.count)
+        XCTAssertEqual(1, mockFilmRepository.repository.context[.delete]?.count)
     }
 
     func testShouldSaveAllLocalChangesToDb() {
@@ -55,9 +55,9 @@ class FilmRepositoryTests: XCTestCase {
         mockFilmRepository.repository.registerDeleted(object: _Titanic)
         mockFilmRepository.repository.commit()
         
-        XCTAssertEqual(1, mockFilmRepository.repository.context!["INSERT"]?.count)
-        XCTAssertEqual(1, mockFilmRepository.repository.context?["MODIFY"]?.count)
-        XCTAssertEqual(1, mockFilmRepository.repository.context!["DELETE"]?.count)
+        XCTAssertEqual(1, mockFilmRepository.repository.context[.insert]?.count)
+        XCTAssertEqual(1, mockFilmRepository.repository.context[.modify]?.count)
+        XCTAssertEqual(1, mockFilmRepository.repository.context[.delete]?.count)
     }
 
 }

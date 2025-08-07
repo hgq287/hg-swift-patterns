@@ -2,7 +2,7 @@
 //  Film.swift
 //  UnitOfWork
 //
-//  Created by Hung Q. Truong on 7/11/19.
+//  Created by Hg Q. on 7/11/19.
 //
 
 import RealmSwift

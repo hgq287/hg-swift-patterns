@@ -2,7 +2,7 @@
 //  Creational.h
 //  Creational
 //
-//  Created by Hung Q. Truong on 11/19/20.
+//  Created by Hg Q. on 11/19/20.
 //
 
 #import <Cocoa/Cocoa.h>

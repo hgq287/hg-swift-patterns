@@ -2,97 +2,95 @@
 //  FilmRepository.swift
 //  UnitOfWork
 //
-//  Created by Hung Truong on 7/11/19.
+//  Created by Hg Q. on 7/11/19.
 //
 
 import Foundation
 
-open class FilmRepository: IUnitOfWork {
+public class FilmRepository: IUnitOfWork {
     
-    typealias T = Film
+    public typealias T = Film
     
-    public let INSERT = "INSERT"
-    public let MODIFY = "MODIFY"
-    public let DELETE = "DELETE"
+    public enum Operation: String {
+        case insert = "INSERT"
+        case modify = "MODIFY"
+        case delete = "DELETE"
+    }
     
-    internal let filmDatabase: FilmDatabase
-    internal var context: Dictionary<String, Array<Film>>?
+    private let filmDatabase: FilmDatabase
+
+    public var context: [Operation: [Film]] = [:]
     
-    public init(context: Dictionary<String, Array<Film>>, filmDatabase: FilmDatabase) {
-        
-        self.context = context
+    public init(filmDatabase: FilmDatabase) {
         self.filmDatabase = filmDatabase
     }
     
-    // MARK: - Publics
+    // MARK: - Public Methods
     
     public func registerNew(object: Film) {
         print("Registering \(object.title) for insert in context")
-        self.register(object: object, operation: self.INSERT)
+        self.register(object: object, operation: .insert)
     }
     
     public func registerModified(object: Film) {
         print("Registering \(object.title) for modify in context")
-        self.register(object: object, operation: self.MODIFY)
+        self.register(object: object, operation: .modify)
     }
     
     public func registerDeleted(object: Film) {
         print("Registering \(object.title) for delete in context")
-        self.register(object: object, operation: self.DELETE)
+        self.register(object: object, operation: .delete)
     }
     
     public func commit() {
-        if context == nil || context!.count == 0 {
+        guard !context.isEmpty else {
+            print("No changes to commit.")
             return
         }
-
-        if (context?.keys.contains(self.INSERT))! {
-            self.commitInsert()
-        }
         
-        if (context?.keys.contains(self.MODIFY))! {
-            self.commitModify()
-        }
+        // Use a more modern and safer approach with optional chaining
+        // and nil coalescing.
+        self.commitInsert()
+        self.commitModify()
+        self.commitDelete()
         
-        if (context?.keys.contains(self.DELETE))! {
-            self.commitDelete()
+        // Clear the context after a successful commit
+        self.context.removeAll()
+        print("Commit successful. Context cleared.")
+    }
+    
+    // MARK: - Internal Methods
+    
+    private func register(object: Film, operation: Operation) {
+        // Use a subscript with a default value to simplify the code
+        // and avoid checking for nil.
+        self.context[operation, default: []].append(object)
+    }
+    
+    private func commitInsert() {
+        if let filmsToBeInserted = self.context[.insert] {
+            for film in filmsToBeInserted {
+                print("Saving \(film.title) to database")
+                self.filmDatabase.insert(film: film)
+            }
         }
     }
     
-    
-    // MARK: - Internals
-    
-    internal func register(object: Film, operation: String) {
-        var filmsToOperate = self.context![operation]
-        if filmsToOperate == nil {
-            filmsToOperate = Array<Film>()
-        }
-        filmsToOperate?.append(object)
-        self.context![operation] = filmsToOperate
-        
-    }
-    
-    internal func commitInsert() {
-        let filmsToBeInserted: Array<Film>? = self.context![self.INSERT]
-        for film: Film in filmsToBeInserted! {
-            print("Saving \(film.title) to database")
-            self.filmDatabase.insert(film: film)
+    private func commitModify() {
+        if let filmsToBeModified = self.context[.modify] {
+            for film in filmsToBeModified {
+                print("Modifying \(film.title) to database")
+                self.filmDatabase.modify(film: film)
+            }
         }
     }
     
-    internal func commitModify() {
-        let filmsToBeModified: Array<Film>? = self.context![self.MODIFY]
-        for film: Film in filmsToBeModified! {
-            print("Modifying \(film.title) to database")
-            self.filmDatabase.modify(film: film)
-        }
-    }
-    
-    internal func commitDelete() {
-        let filmsToBeDeleted: Array<Film>? = self.context![self.DELETE]
-        for film: Film in filmsToBeDeleted! {
-            print("Deleting \(film.title) to database")
-            self.filmDatabase.delete(film: film)
+    private func commitDelete() {
+        if let filmsToBeDeleted = self.context[.delete] {
+            for film in filmsToBeDeleted {
+                print("Deleting \(film.title) from database")
+                self.filmDatabase.delete(film: film)
+            }
         }
     }
 }

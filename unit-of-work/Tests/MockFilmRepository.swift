@@ -2,21 +2,19 @@
 //  MockFilmRepository.swift
 //  UnitOfWorkTests
 //
-//  Created by Hung Truong on 7/11/19.
+//  Created by Hg Q. on 7/11/19.
 //
 
 import Foundation
 import UnitOfWork
 
-internal class MockFilmRepository {
+public class MockFilmRepository {
     
-    fileprivate let database: FilmDatabase
-    fileprivate let context: Dictionary<String, Array<Film>>
-    internal var repository: FilmRepository
+    private let database: FilmDatabase
+    public var repository: FilmRepository
     
-    init() {
-        self.context = Dictionary<String, Array<Film>>()
+    public init() {
         self.database = FilmDatabase()
-        self.repository = FilmRepository(context: context, filmDatabase: database)
+        self.repository = FilmRepository(filmDatabase: database)
     }
 }

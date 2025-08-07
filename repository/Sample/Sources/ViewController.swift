@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  Sample
 //
-//  Created by Hung Q. Truong on 7/10/19.
-//  Copyright © 2020 Hung Q. Truong. All rights reserved.
+//  Created by Hg Q. on 7/10/19.
+//  Copyright © 2020 Hg Q. All rights reserved.
 //
 
 import Cocoa
