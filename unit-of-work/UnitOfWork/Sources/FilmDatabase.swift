@@ -7,19 +7,13 @@
 
 import Foundation
 
-open class FilmDatabase {
+public class FilmDatabase {
     
     public init() {}
     
-    public func insert(film: Film) {
-        
-    }
+    public func insert(film: Film) {}
     
-    public func modify(film: Film) {
-        
-    }
+    public func modify(film: Film) {}
     
-    public func delete(film: Film) {
-        
-    }
+    public func delete(film: Film) {}
 }

@@ -2,16 +2,15 @@
 //  AppDelegate.swift
 //  Sample
 //
-//  Created by Hg Q. on 7/10/19.
-//  Copyright © 2019 Hg Q. All rights reserved.
+//  Created by Hg Q. on 7/8/25.
 //
 
 import Cocoa
 import UnitOfWork
 
-@NSApplicationMain
+@main
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
@@ -22,7 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let context: Dictionary<String, Array<Film>> = Dictionary<String, Array<Film>>()
         let database: FilmDatabase = FilmDatabase()
         
-        let repository: FilmRepository = FilmRepository(context: context, filmDatabase: database)
+        let repository: FilmRepository = FilmRepository(filmDatabase: database)
         repository.registerNew(object: _BenHur)
         repository.registerModified(object: _Titanic)
         repository.registerModified(object: _BenHur)
@@ -30,11 +29,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         repository.registerDeleted(object: _TheLordOfTheRings)
         
         repository.commit()
-        
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+    }
+
+    func applicationSupportsSecureRestorableState(_ app: NSApplication) -> Bool {
+        return true
     }
 
 

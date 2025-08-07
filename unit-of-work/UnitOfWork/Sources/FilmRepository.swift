@@ -17,7 +17,7 @@ public class FilmRepository: IUnitOfWork {
         case delete = "DELETE"
     }
     
-    private let filmDatabase: FilmDatabase
+    fileprivate let filmDatabase: FilmDatabase
 
     public var context: [Operation: [Film]] = [:]
     
@@ -48,8 +48,6 @@ public class FilmRepository: IUnitOfWork {
             return
         }
         
-        // Use a more modern and safer approach with optional chaining
-        // and nil coalescing.
         self.commitInsert()
         self.commitModify()
         self.commitDelete()
@@ -62,8 +60,6 @@ public class FilmRepository: IUnitOfWork {
     // MARK: - Internal Methods
     
     private func register(object: Film, operation: Operation) {
-        // Use a subscript with a default value to simplify the code
-        // and avoid checking for nil.
         self.context[operation, default: []].append(object)
     }
     

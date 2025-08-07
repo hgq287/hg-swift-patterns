@@ -2,8 +2,7 @@
 //  ViewController.swift
 //  Sample
 //
-//  Created by Hg Q. on 7/10/19.
-//  Copyright © 2019 Hg Q. All rights reserved.
+//  Created by Hg Q. on 7/8/25.
 //
 
 import Cocoa
@@ -21,7 +20,4 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
-
-
 }
-
