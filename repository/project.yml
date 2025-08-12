@@ -1,7 +1,11 @@
 name: Repository
 options:
-  minimumXcodeGenVersion: 2.2.0
+  minimumXcodeGenVersion:  2.42.0
   createIntermediateGroups: true
+packages:
+  RealmSwift:
+    url: https://github.com/realm/realm-swift.git
+    branch: master
 targets:
   # Repository Framework
   Repository:
@@ -13,8 +17,7 @@ targets:
       Debug: configs/Repository-Debug.xcconfig
       Release: configs/Repository-Release.xcconfig
     dependencies:
-      - carthage: Realm
-      - carthage: RealmSwift
+      - package: RealmSwift
   RepositoryTests:
     platform: macOS
     type: bundle.unit-test

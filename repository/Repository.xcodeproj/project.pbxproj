@@ -3,32 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00D6BB8093F885A4153D11CF /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F579523FF6CA05773C75F5F /* Repository.framework */; };
+		0BFE2F6CE791CC18BFAB58B5 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 09F87F5CAFA5795E55F35A06 /* RealmSwift */; };
 		0EC196D9593EA1163BA5AF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69B6CE44F9326719F51C1B9C /* AppDelegate.swift */; };
 		188B9295329CFC94D3E008B4 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4A56A06C1956A922311771 /* BaseObject.swift */; };
-		18C9DFAF044310B77682B4E6 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA4BBDCAA06AA8CF10E2A341 /* Realm.framework */; };
 		1F6025CCCED9B769CAFEFA18 /* GenericItemRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6417F8979D8AB3919E2AEF26 /* GenericItemRepository.swift */; };
 		233050937928383305C3A323 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB555DC8F24334C482ADF927 /* Film.swift */; };
-		325C3B83C39CA7F339F699BA /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6688303D3E338ADE9F520ACA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		38A80C9BACEBAEB4F9AE4B48 /* FilmRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E84C89D9DCE74F4804C13C9 /* FilmRepository.swift */; };
 		3F36493B267DE2742700C20B /* DatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC9A8A2E781A71FBA7F2898 /* DatabaseTests.swift */; };
 		4FDD5FFE7B9820A85655C312 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F35D87841D03B63B099508A /* ViewController.swift */; };
-		5BF052E2C73BE1C67BFC7742 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6688303D3E338ADE9F520ACA /* RealmSwift.framework */; };
 		5F6413D0225A318681D4E98E /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F579523FF6CA05773C75F5F /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		753C2433BD36C6CA32C41954 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5496AFBB4164E1DD0145FB5F /* Assets.xcassets */; };
 		79725AEB65D6868D21852680 /* Repository.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F579523FF6CA05773C75F5F /* Repository.framework */; };
 		83CF1CBACE62CF35F27BB77D /* Repository.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F579523FF6CA05773C75F5F /* Repository.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		927B04492B6FE208586CC566 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4076B430461A47F9DA32711F /* Main.storyboard */; };
-		92CB8318042999E788538295 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA4BBDCAA06AA8CF10E2A341 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		A12A8DBD859BD2D0A5042B49 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA4BBDCAA06AA8CF10E2A341 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CE20F2D2550584FF2761AFB9 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69FC178637D14A2ED7429BD3 /* RepositoryTests.swift */; };
 		ECACBDC01A9E922A330900C3 /* IDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E889BCA87F7AD4871245143C /* IDatabase.swift */; };
 		F26D01F51D0F392946194E23 /* IBaseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969C6B14ED17F5444A299F9B /* IBaseRepository.swift */; };
-		F53798C3B58FD39169CA6260 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6688303D3E338ADE9F520ACA /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FEB10CC391C36041AAED7026 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F519E93C4ADA4EB97E0969 /* Database.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +52,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				5F6413D0225A318681D4E98E /* Repository.framework in Embed Frameworks */,
-				92CB8318042999E788538295 /* Realm.framework in Embed Frameworks */,
-				F53798C3B58FD39169CA6260 /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,8 +63,6 @@
 			dstSubfolderSpec = 10;
 			files = (
 				83CF1CBACE62CF35F27BB77D /* Repository.framework in Embed Frameworks */,
-				A12A8DBD859BD2D0A5042B49 /* Realm.framework in Embed Frameworks */,
-				325C3B83C39CA7F339F699BA /* RealmSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -90,7 +81,6 @@
 		5A4A56A06C1956A922311771 /* BaseObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseObject.swift; sourceTree = "<group>"; };
 		5F35D87841D03B63B099508A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6417F8979D8AB3919E2AEF26 /* GenericItemRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericItemRepository.swift; sourceTree = "<group>"; };
-		6688303D3E338ADE9F520ACA /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		67247B8883A3A8C3FE4CE206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		69B6CE44F9326719F51C1B9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69FC178637D14A2ED7429BD3 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
@@ -101,7 +91,6 @@
 		A8126F6F51D5E25470C3BF09 /* Sample-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Sample-Debug.xcconfig"; sourceTree = "<group>"; };
 		BB555DC8F24334C482ADF927 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		BCC9A8A2E781A71FBA7F2898 /* DatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseTests.swift; sourceTree = "<group>"; };
-		CA4BBDCAA06AA8CF10E2A341 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		D73C4698099C1412880DDD67 /* RepositoryTests-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "RepositoryTests-Release.xcconfig"; sourceTree = "<group>"; };
 		DA64D7BC0911B5463D2E1846 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E308B8D671DA51F7D503435F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -113,8 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C9DFAF044310B77682B4E6 /* Realm.framework in Frameworks */,
-				5BF052E2C73BE1C67BFC7742 /* RealmSwift.framework in Frameworks */,
+				0BFE2F6CE791CC18BFAB58B5 /* RealmSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +165,6 @@
 				A3BEEFA8D1BD741D10AF99BA /* Repository */,
 				C09F45D05CC14E359E8BB5B9 /* Sample */,
 				43D714972A84D2AAC5A54C5A /* Tests */,
-				AAE649489D78DD6539EEB5FF /* Frameworks */,
 				B9E40665B322982A6453CC4E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -201,15 +188,6 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		A463E98495688604286D324C /* Carthage */ = {
-			isa = PBXGroup;
-			children = (
-				A612D447E0204D98CD4C48BA /* Mac */,
-			);
-			name = Carthage;
-			path = Carthage/Build;
-			sourceTree = "<group>";
-		};
 		A584DF5BC7BED80B9F1A7FAC /* infrastructure */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,23 +198,6 @@
 				E889BCA87F7AD4871245143C /* IDatabase.swift */,
 			);
 			path = infrastructure;
-			sourceTree = "<group>";
-		};
-		A612D447E0204D98CD4C48BA /* Mac */ = {
-			isa = PBXGroup;
-			children = (
-				CA4BBDCAA06AA8CF10E2A341 /* Realm.framework */,
-				6688303D3E338ADE9F520ACA /* RealmSwift.framework */,
-			);
-			path = Mac;
-			sourceTree = "<group>";
-		};
-		AAE649489D78DD6539EEB5FF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A463E98495688604286D324C /* Carthage */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B9E40665B322982A6453CC4E /* Products */ = {
@@ -274,6 +235,9 @@
 			dependencies = (
 			);
 			name = Repository;
+			packageProductDependencies = (
+				09F87F5CAFA5795E55F35A06 /* RealmSwift */,
+			);
 			productName = Repository;
 			productReference = 6F579523FF6CA05773C75F5F /* Repository.framework */;
 			productType = "com.apple.product-type.framework";
@@ -321,17 +285,23 @@
 		D776D4FCF51BF7CA8714C709 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1020;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = DAEAABCA4F1BDA57B6C50343 /* Build configuration list for PBXProject "Repository" */;
-			compatibilityVersion = "Xcode 10.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = 5DD9E0D03C122068948E3C8D;
+			packageReferences = (
+				B79AE08CA3E69B318B72F70D /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -419,12 +389,7 @@
 			baseConfigurationReference = D73C4698099C1412880DDD67 /* RepositoryTests-Release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -441,10 +406,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,12 +420,7 @@
 			baseConfigurationReference = 75DD94E4B3851A4ABC100CE5 /* RepositoryTests-Debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -486,10 +442,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -511,6 +463,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -526,6 +479,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -550,7 +504,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -570,6 +525,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -585,6 +541,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -603,11 +560,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -622,10 +581,6 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -643,10 +598,6 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -696,6 +647,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B79AE08CA3E69B318B72F70D /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		09F87F5CAFA5795E55F35A06 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B79AE08CA3E69B318B72F70D /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D776D4FCF51BF7CA8714C709 /* Project object */;
 }
