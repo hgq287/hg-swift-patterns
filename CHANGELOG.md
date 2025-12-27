@@ -23,3 +23,10 @@ All notable changes to this project will be documented in this file.
 - Repository pattern: Repository framework, UnitTests and Sample
 - README.md
 - CHANGELOG.md
+
+## [0.0.1] - 2025-12-27
+### Added
+- Abstract Document design pattern
+  - AbstractDocument framework
+  - Sample SwiftUI 
+  - Add unit tests

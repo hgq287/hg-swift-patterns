@@ -19,10 +19,10 @@ Explore practical examples of software design patterns written in clean, modern 
 
 ```
 hg-swift-patterns/
+├── abstract-document/
 ├── creational/
-│   └── UnitOfWork.swift
-├── structural/
-├── behavioral/
+├── repository/
+├── unit-of-work/
 └── LICENSE
 ```
 
