@@ -1,0 +1,45 @@
+name: AbstractDocument
+options:
+  minimumXcodeGenVersion:  2.42.0
+  createIntermediateGroups: true
+targets:
+  # Repository Framework
+  AbstractDocument:
+    platform: macOS
+    type: framework
+    sources:
+      - AbstractDocument
+    configFiles:
+      Debug: configs/AbstractDocument-Debug.xcconfig
+      Release: configs/AbstractDocument-Release.xcconfig
+  AbstractDocumentTests:
+    platform: macOS
+    type: bundle.unit-test
+    configFiles:
+      Debug: configs/AbstractDocumentTests-Debug.xcconfig
+      Release: configs/AbstractDocumentTests-Release.xcconfig
+    sources:
+      - Tests
+    dependencies:
+      - target: AbstractDocument
+    scheme:
+      testTargets:
+        - AbstractDocumentTests
+      gatherCoverageData: true
+  # Sample
+  Sample:
+    platform: macOS
+    type: application
+    sources:
+      - Sample
+    configFiles:
+      Debug: configs/Sample-Debug.xcconfig
+      Release: configs/Sample-Release.xcconfig
+    settings:
+      base:
+        INFOPLIST_FILE: Sample/Info.plist
+    dependencies:
+      - target: AbstractDocument
+    scheme:
+      environmentVariables:
+        ENABLE_SIGNPOST: YES

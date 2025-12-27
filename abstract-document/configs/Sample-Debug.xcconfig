@@ -1,0 +1,4 @@
+#include "Base.xcconfig"
+
+PRODUCT_BUNDLE_IDENTIFIER = com.swift-patterns.AbstractDocument.dev
+DB_NAME = swift-patterns-dev
