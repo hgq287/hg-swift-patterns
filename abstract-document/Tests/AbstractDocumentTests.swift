@@ -17,4 +17,20 @@ final class AbstractDocumentTests: XCTestCase {
             "Abstract Document design pattern"
         )
     }
+    
+    func testChildrenMapping() {
+        let data: [String: Any] = [
+            "patterns": [
+                ["name": "Abstract Document", "type": "Structural"],
+                ["name": "Factory Method", "type": "Creational"]
+            ]
+        ]
+        let doc = AbstractDocument(properties: data)
+        let children = doc.children("patterns") { dict in
+            return dict["name"] as! String
+        }
+        
+        XCTAssertEqual(children.count, 2)
+        XCTAssertEqual(children.first, "Abstract Document")
+    }
 }
